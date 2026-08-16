@@ -3,7 +3,7 @@
 import pandas as pd 
 
 def load_data(filename: str):
-    if not filename.endswith(".csv", ".xlsx"):
+    if not filename.endswith((".csv", ".xlsx")):
         raise ValueError("Filename must be an Excel or a CSV file")
     if filename .endswith(".csv"):
         df = pd.read_csv(filename)

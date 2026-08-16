@@ -23,9 +23,9 @@ def calculate_all_funds_cagr(df):
 
     results = []
 
-    for fund_name, group in df.groupby("Mutual Fund"):
+    for fund_name, group in df.groupby("Fund Name"):
         cagr = calculate_each_fund_cagr(group)
 
-        results.append({"Mutual Fund":fund_name, "CAGR": cagr})
+        results.append({"Fund Name":fund_name, "CAGR": cagr})
         
     return results

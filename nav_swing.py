@@ -5,7 +5,7 @@ def detect_nav_swing(df):
     swings = []
 
     for fund_name, group in df.groupby("Fund Name"):
-        group = group.sort_values("Date").copy()
+        group = group.sort_values("Date")
 
         previous_day_nav = None
 
